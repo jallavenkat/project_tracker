@@ -71,7 +71,7 @@ $route['issues'] = 'tms/issues';
 $route['discussions'] = 'discussions/index';
 $route['add-item'] = 'discussions/createItem';
 
-/*
+
 require_once (BASEPATH .'database/DB.php');
 $db =& DB();
 $sql = "SELECT id,firstname FROM teams where position ='team-lead' ";
@@ -133,4 +133,4 @@ if(@sizeOf($listings3) > 0)
 		}
 	}
 }
-*/
+
