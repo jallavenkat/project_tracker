@@ -16,14 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Add Project
       <span class="hmenu">
-          <a href="<?php echo base_url();?>projects" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/projects" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>projects">
+        <a href="<?php echo base_url();?>index.php/projects">
             Projects
         </a>
         </li>
@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="card-body">
           <h5 class="card-title">Add Project</h5>
           
-          <form method="POST" action="<?php echo base_url();?>home/saveProject">
+          <form method="POST" action="<?php echo base_url();?>index.php/home/saveProject">
             <div class="row mb-3">
                     <div class="col-lg-6 mb-3">
                         <div class="row mb-3">

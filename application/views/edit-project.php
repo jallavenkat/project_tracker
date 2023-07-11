@@ -17,14 +17,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Edit Project#<?php echo @$project[0]->project_name;?>
       <span class="hmenu">
-          <a href="<?php echo base_url();?>projects" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/projects" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>projects">
+        <a href="<?php echo base_url();?>index.php/projects">
             Projects
         </a>
         </li>
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           
             <div class="row mb-3">
               <div class="col-lg-7 mb-3">
-                <form method="POST" action="<?php echo base_url();?>home/updateProject">
+                <form method="POST" action="<?php echo base_url();?>index.php/home/updateProject">
                     <div class="col-lg-6 mb-3">
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-4 col-form-label">Project Title</label>
@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                   <div class="col-lg-12" style="background-color:#eee;padding:15px;text-align:center;">
                   <h4>Upload Project Documents</h4>
-                    <form class="dropzone" action="<?php echo base_url();?>home/uploadProjectFolder/<?php echo @$rowid;?>" id="fileupload" mwthod="POST" enctype="multipart/form-data">
+                    <form class="dropzone" action="<?php echo base_url();?>index.php/home/uploadProjectFolder/<?php echo @$rowid;?>" id="fileupload" mwthod="POST" enctype="multipart/form-data">
                   
                     
                   </form>
@@ -193,7 +193,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         autoProcessQueue: false,
         init: function () {
             // $.ajax({
-            //     url: '<?php echo base_url();?>home/uploadProjectFolder/<?php echo @$rowid;?>',
+            //     url: '<?php echo base_url();?>index.php/home/uploadProjectFolder/<?php echo @$rowid;?>',
             //     type: 'get',
             //     dataType: 'json',
             //     success: function (response) {

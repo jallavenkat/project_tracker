@@ -7,14 +7,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Add Team Members
       <span class="hmenu">
-          <a href="<?php echo base_url();?>team-members" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/team-members" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>team-members">
+        <a href="<?php echo base_url();?>index.php/team-members">
             Team Members
         </a>
         </li>
@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h5 class="card-title">Add Member</h5>
           
             <div class="row mb-3">
-                <form method="POST" action="<?php echo base_url();?>home/updateTeamMember">
+                <form method="POST" action="<?php echo base_url();?>index.php/home/updateTeamMember">
                     <div class="col-lg-6 mb-3">
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-4 col-form-label">Firstname</label>

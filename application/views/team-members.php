@@ -11,8 +11,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     {
   ?> 
       <span class="hmenu">
-          <a href="<?php echo base_url();?>assign-member-to-lead" class="btn btn-info float-right" >Assign Member To Lead</a>
-          <a href="<?php echo base_url();?>add-team-member" class="btn btn-warning float-right mr-10p">Add Member</a>
+          <a href="<?php echo base_url();?>index.php/assign-member-to-lead" class="btn btn-info float-right" >Assign Member To Lead</a>
+          <a href="<?php echo base_url();?>index.php/add-team-member" class="btn btn-warning float-right mr-10p">Add Member</a>
       </span>
   <?php
     }
@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Team</li>
     </ol>
   </nav>

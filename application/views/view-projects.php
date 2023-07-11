@@ -18,12 +18,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         if(@$actionfrom == "teams")
         {
         ?>
-            <a href="<?php echo base_url();?>team-projects" class="btn btn-light">Back</a>
+            <a href="<?php echo base_url();?>index.php/team-projects" class="btn btn-light">Back</a>
         <?php
         }
         else{
         ?>
-        <a href="<?php echo base_url();?>projects" class="btn btn-light">Back</a>
+        <a href="<?php echo base_url();?>index.php/projects" class="btn btn-light">Back</a>
         <?php
         }
         ?>
@@ -31,9 +31,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>projects">
+        <a href="<?php echo base_url();?>index.php/projects">
             Projects
         </a>
         </li>
@@ -185,7 +185,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         autoProcessQueue: false,
         init: function () {
             // $.ajax({
-            //     url: '<?php echo base_url();?>home/uploadProjectFolder/<?php echo @$rowid;?>',
+            //     url: '<?php echo base_url();?>index.php/home/uploadProjectFolder/<?php echo @$rowid;?>',
             //     type: 'get',
             //     dataType: 'json',
             //     success: function (response) {

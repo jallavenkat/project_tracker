@@ -9,12 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Discussions
       <span class="hmenu">
-          <a href="<?php echo base_url();?>add-item" class="btn btn-warning">Add Discussion</a>
+          <a href="<?php echo base_url();?>index.php/add-item" class="btn btn-warning">Add Discussion</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Discussions</li>
     </ol>
   </nav>
@@ -60,7 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <tr>
                       <th scope="row"><?php echo ($t+1);?></th>
                       <td>
-                            <a href="<?php echo base_url();?>view-topic/<?php echo @$discussions[$t]->s_code;?>">
+                            <a href="<?php echo base_url();?>index.php/view-topic/<?php echo @$discussions[$t]->s_code;?>">
                                 <?php echo @$discussions[$t]->s_code;?>
                             </a>
                       </td>
@@ -105,7 +105,7 @@ function updateTaskStatus(taskid,projectid,oVal){
  
   $.ajax({
     type:"POST",
-    url:"<?php echo base_url();?>home/updateTaskStatus/"+taskid+"/"+projectid+"/"+oVal,
+    url:"<?php echo base_url();?>index.php/home/updateTaskStatus/"+taskid+"/"+projectid+"/"+oVal,
     async:false,
     success:function(response){
       window.location.reload();

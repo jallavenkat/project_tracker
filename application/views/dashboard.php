@@ -180,7 +180,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                       ?>
                       <tr>
                         <th scope="row">
-                          <a href="<?php echo base_url();?>view-task/<?php echo @$recenttasks[$r]->task_code;?>">
+                          <a href="<?php echo base_url();?>index.php/view-task/<?php echo @$recenttasks[$r]->task_code;?>">
                             # <?php 
                               echo @$recenttasks[$r]->task_code."<br />";
                               $date1 = @date("Y-m-d");

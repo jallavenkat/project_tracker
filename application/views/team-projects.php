@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         {
         ?>
       <span class="hmenu">
-          <a href="<?php echo base_url();?>assign-project" class="btn btn-warning">Assign Project</a>
+          <a href="<?php echo base_url();?>index.php/assign-project" class="btn btn-warning">Assign Project</a>
       </span>
       <?php
         }
@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Projects</li>
     </ol>
   </nav>
@@ -178,7 +178,7 @@ function updateProjectStatus(projectid,oVal,teamid){
  
   $.ajax({
     type:"POST",
-    url:"<?php echo base_url();?>home/updateProjectStatus/"+projectid+"/"+oVal+"/"+teamid+"/<?php echo @$user[0]->role;?>",
+    url:"<?php echo base_url();?>index.php/home/updateProjectStatus/"+projectid+"/"+oVal+"/"+teamid+"/<?php echo @$user[0]->role;?>",
     async:false,
     success:function(response){
       window.location.reload();

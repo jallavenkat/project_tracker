@@ -7,12 +7,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Team Members
       <span class="hmenu">
-          <a href="<?php echo base_url();?>team-members" class="btn btn-default float-right mr-10p">Back</a>
+          <a href="<?php echo base_url();?>index.php/team-members" class="btn btn-default float-right mr-10p">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Team</li>
     </ol>
   </nav>

@@ -28,14 +28,14 @@ class Home extends CI_Controller {
 			$this->load->view('login');
 		}
 		else{
-			redirect(base_url()."dashboard");
+			redirect(base_url()."index.php/dashboard");
 		}
 	}
 	public function dashboard()
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$user = $this->user;
@@ -348,7 +348,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			
@@ -453,7 +453,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			
@@ -469,7 +469,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			
@@ -487,7 +487,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$prj = @$this->sql->getTableRowDataOrder("projects",array("project_code" => @$code));
@@ -505,7 +505,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -522,7 +522,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@isset($_POST["saveMember"]))
@@ -557,7 +557,7 @@ class Home extends CI_Controller {
 				else{
 					$this->session->set_userdata(array("projectmessage" => "Failed to added project"));
 				}
-				redirect(base_url()."home/editProject/".@$ins);
+				redirect(base_url()."index.php/home/editProject/".@$ins);
 			}
 		}
 	}
@@ -566,7 +566,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@isset($_POST["saveMember"]))
@@ -598,7 +598,7 @@ class Home extends CI_Controller {
 				else{
 					$this->session->set_userdata(array("projectmessage" => "Failed to update project"));
 				}
-				redirect(base_url()."projects");
+				redirect(base_url()."index.php/projects");
 			}
 		}
 	}
@@ -655,13 +655,13 @@ class Home extends CI_Controller {
 	}
 	public function reloadPage($projectid)
 	{
-		redirect(base_url()."home/editProject/".@$projectid);
+		redirect(base_url()."index.php/home/editProject/".@$projectid);
 	}
 	public function teammembers()
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$user = $this->user;
@@ -765,7 +765,7 @@ class Home extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -780,7 +780,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -796,7 +796,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@isset($_POST["saveMember"]))
@@ -871,7 +871,7 @@ class Home extends CI_Controller {
 				else{
 					$this->session->set_userdata(array("teammessage" => "Failed to added member"));
 				}
-				redirect(base_url()."team-members");
+				redirect(base_url()."index.php/team-members");
 			}
 		}
 	}
@@ -880,7 +880,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@isset($_POST["saveMember"]))
@@ -917,7 +917,7 @@ class Home extends CI_Controller {
 				else{
 					$this->session->set_userdata(array("teammessage" => "Failed to update member"));
 				}
-				redirect(base_url()."team-members");
+				redirect(base_url()."index.php/team-members");
 			}
 		}
 	}
@@ -928,7 +928,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$user =$this->user;
@@ -1075,7 +1075,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -1095,7 +1095,7 @@ class Home extends CI_Controller {
 		// die();
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			// if(@isset($_POST["saveMember"]))
@@ -1268,7 +1268,7 @@ class Home extends CI_Controller {
 					$this->session->set_userdata(array("taskmessage" => "Successfully added task"));
 					if(empty($_FILES['file']['name']) == 1)
 					{
-						redirect(base_url()."tasks");
+						redirect(base_url()."index.php/tasks");
 					}
 					else{
 						echo 1;
@@ -1278,7 +1278,7 @@ class Home extends CI_Controller {
 					$this->session->set_userdata(array("taskmessage" => "Failed to added task"));
 					if(empty($_FILES['file']['name']) == 1)
 					{
-						redirect(base_url()."tasks");
+						redirect(base_url()."index.php/tasks");
 					}
 					else{
 						echo 0;
@@ -1427,7 +1427,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -1450,7 +1450,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$task = @$this->sql->getTableRowDataOrder("tasks",array("task_code" => @$code));
@@ -1472,7 +1472,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@isset($_POST["saveMember"]))
@@ -1557,7 +1557,7 @@ class Home extends CI_Controller {
 				else{
 					$this->session->set_userdata(array("taskmessage" => "Failed to update task"));
 				}
-				redirect(base_url()."tasks");
+				redirect(base_url()."index.php/tasks");
 			}
 		}
 	}
@@ -1620,7 +1620,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$params = array(
@@ -1632,11 +1632,11 @@ class Home extends CI_Controller {
 			if($upd)
 			{		
 				$this->session->set_userdata(array("taskmessage" => "Successfully Update Task"));
-				redirect(base_url()."tasks");	
+				redirect(base_url()."index.php/tasks");	
 			}
 			else{
 				$this->session->set_userdata(array("taskmessage" => "Failed To Update Task"));
-				redirect(base_url()."tasks");
+				redirect(base_url()."index.php/tasks");
 			}
 		}
 	}
@@ -1647,7 +1647,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -1669,7 +1669,7 @@ class Home extends CI_Controller {
 		// die();
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			// if(@isset($_POST["saveMember"]))
@@ -1809,7 +1809,7 @@ class Home extends CI_Controller {
 					$this->session->set_userdata(array("taskmessage" => "Successfully added task"));
 					if(empty($_FILES['file']['name']) == 1)
 					{
-						redirect(base_url()."tasks");
+						redirect(base_url()."index.php/tasks");
 					}
 					else{
 						echo 1;
@@ -1819,7 +1819,7 @@ class Home extends CI_Controller {
 					$this->session->set_userdata(array("taskmessage" => "Failed to added task"));
 					if(empty($_FILES['file']['name']) == 1)
 					{
-						redirect(base_url()."tasks");
+						redirect(base_url()."index.php/tasks");
 					}
 					else{
 						echo 0;
@@ -1845,7 +1845,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$user = $this->user;
@@ -1880,7 +1880,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			// print_R($_REQUEST);
@@ -1915,11 +1915,11 @@ class Home extends CI_Controller {
 			if($set == 1)
 			{	
 				$this->session->set_userdata(array("teammessage" => "Successfully Assigned Members"));
-				redirect(base_url()."team-members");	
+				redirect(base_url()."index.php/team-members");	
 			}
 			else{
 				$this->session->set_userdata(array("teammessage" => "Failed to assigned members"));
-				redirect(base_url()."team-members");
+				redirect(base_url()."index.php/team-members");
 			}
 		}
 	}
@@ -1928,7 +1928,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$lead=@$this->sql->getTableRowDataOrder("teams",array("team_status" => 1,"id" => $leadname));
@@ -1977,7 +1977,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{	
 			
@@ -2072,7 +2072,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$user = $this->user;
@@ -2131,7 +2131,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$proejctid = @$this->input->post("project_id");
@@ -2175,7 +2175,7 @@ class Home extends CI_Controller {
 		{
 
 			$this->session->set_userdata(array("projmessage" => "Already Assigned this Project"));
-			redirect(base_url()."team-projects");	
+			redirect(base_url()."index.php/team-projects");	
 		}
 		else{
 			$params = array(
@@ -2217,11 +2217,11 @@ class Home extends CI_Controller {
 				}
 				$ins2 = $this->sql->storeItems("project_logs",$params2);
 				$this->session->set_userdata(array("projmessage" => "Successfully Assigned Project"));
-				redirect(base_url()."team-projects");	
+				redirect(base_url()."index.php/team-projects");	
 			}
 			else{
 				$this->session->set_userdata(array("projmessage" => "Failed To Assigned Project"));
-				redirect(base_url()."team-projects");
+				redirect(base_url()."index.php/team-projects");
 			}
 		}
 	}
@@ -2256,7 +2256,7 @@ class Home extends CI_Controller {
 		{
 
 			$this->session->set_userdata(array("projmessage" => "Already Assigned this Project"));
-			redirect(base_url()."team-projects");	
+			redirect(base_url()."index.php/team-projects");	
 		}
 		else{
 			$params = array(
@@ -2298,11 +2298,11 @@ class Home extends CI_Controller {
 				}
 				$ins2 = $this->sql->storeItems("project_logs",$params2);
 				$this->session->set_userdata(array("projmessage" => "Successfully Assigned Project"));
-				redirect(base_url()."team-projects");	
+				redirect(base_url()."index.php/team-projects");	
 			}
 			else{
 				$this->session->set_userdata(array("projmessage" => "Failed To Assigned Project"));
-				redirect(base_url()."team-projects");
+				redirect(base_url()."index.php/team-projects");
 			}
 		}
 	}
@@ -2311,7 +2311,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			if(@$role == "superadmin" || @$role == "lead" || @$role == "management")
@@ -2348,11 +2348,11 @@ class Home extends CI_Controller {
 				);
 				$ins2 = $this->sql->storeItems("project_logs",$params2);
 				$this->session->set_userdata(array("projmessage" => "Successfully Update Project"));
-				redirect(base_url()."team-projects");	
+				redirect(base_url()."index.php/team-projects");	
 			}
 			else{
 				$this->session->set_userdata(array("projmessage" => "Failed To Update Project"));
-				redirect(base_url()."team-projects");
+				redirect(base_url()."index.php/team-projects");
 			}
 		}
 	}
@@ -2362,7 +2362,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -2381,7 +2381,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 		// print_R($_REQUEST);
@@ -2449,11 +2449,11 @@ class Home extends CI_Controller {
 			if($set == 1)
 			{		
 				$this->session->set_userdata(array("teammessage" => "Successfully Assigned Project To Members"));
-				redirect(base_url()."team-projects");	
+				redirect(base_url()."index.php/team-projects");	
 			}
 			else{
 				$this->session->set_userdata(array("teammessage" => "Failed to assigned Project To Members"));
-				redirect(base_url()."team-projects");
+				redirect(base_url()."index.php/team-projects");
 			}
 		}
 	}
@@ -2462,7 +2462,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -2514,7 +2514,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -2565,7 +2565,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -2584,7 +2584,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -2634,7 +2634,7 @@ class Home extends CI_Controller {
 		
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;

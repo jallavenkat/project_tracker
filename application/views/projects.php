@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         {
         ?>
       <span class="hmenu">
-          <a href="<?php echo base_url();?>add-project" class="btn btn-warning">Add Project</a>
+          <a href="<?php echo base_url();?>index.php/add-project" class="btn btn-warning">Add Project</a>
       </span>
       <?php
         }
@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Projects</li>
     </ol>
   </nav>

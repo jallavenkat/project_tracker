@@ -45,7 +45,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="<?php echo base_url();?>" class="logo d-flex align-items-center">
+      <a href="<?php echo base_url();?>index.php/" class="logo d-flex align-items-center">
         <img src="<?php echo base_url();?>assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Admin</span>
       </a>
@@ -86,7 +86,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url();?>">
+              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url();?>index.php/">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -96,7 +96,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url();?>login/logout">
+              <a class="dropdown-item d-flex align-items-center" href="<?php echo base_url();?>index.php/login/logout">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -116,7 +116,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link  <?php if(@$menu == "dashboard"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>">
+        <a class="nav-link  <?php if(@$menu == "dashboard"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>index.php/">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -146,13 +146,13 @@
           {
         ?>  
           <li>
-            <a href="<?php echo base_url();?>projects" class="<?php if(@$smenu == "projects"){echo "active";}?>">
+            <a href="<?php echo base_url();?>index.php/projects" class="<?php if(@$smenu == "projects"){echo "active";}?>">
               <i class="bi bi-circle"></i><span>View All Projects</span>
             </a>
           </li>
           
           <li>
-            <a href="<?php echo base_url();?>team-projects" class="<?php if(@$smenu == "teamprojects"){echo "active";}?>">
+            <a href="<?php echo base_url();?>index.php/team-projects" class="<?php if(@$smenu == "teamprojects"){echo "active";}?>">
               <i class="bi bi-circle"></i><span>Team Projects</span>
             </a>
           </li>
@@ -161,7 +161,7 @@
             else{
           ?>
           <li>
-            <a href="<?php echo base_url();?>team-projects" class="<?php if(@$smenu == "teamprojects"){echo "active";}?>">
+            <a href="<?php echo base_url();?>index.php/team-projects" class="<?php if(@$smenu == "teamprojects"){echo "active";}?>">
               <i class="bi bi-circle"></i><span>My Projects</span>
             </a>
           </li>
@@ -180,7 +180,7 @@
           {
         ?>
       <li class="nav-item">
-        <a class="nav-link <?php if(@$menu == "teams"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>team-members">
+        <a class="nav-link <?php if(@$menu == "teams"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>index.php/team-members">
           <i class="bi bi-card-list"></i>
           <span>Team Members</span>
         </a>
@@ -191,7 +191,7 @@
       ?>
 
       <li class="nav-item">
-        <a class="nav-link  <?php if(@$menu == "tasks"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>tasks">
+        <a class="nav-link  <?php if(@$menu == "tasks"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>index.php/tasks">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Tasks</span>
         </a>
@@ -200,7 +200,7 @@
     
       
       <li class="nav-item">
-        <a class="nav-link  <?php if(@$menu == "discussions"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>discussions">
+        <a class="nav-link  <?php if(@$menu == "discussions"){echo "";}else{echo "collapsed";}?>" href="<?php echo base_url();?>index.php/discussions">
           <i class="bi bi-people"></i>
           <span>Discussions</span>
         </a>

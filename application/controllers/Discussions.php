@@ -16,7 +16,7 @@ class Discussions extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -31,7 +31,7 @@ class Discussions extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;
@@ -57,11 +57,11 @@ class Discussions extends CI_Controller {
 		$ins2 = $this->sql->storeItems("solutions",$params);
         if($ins2){
             $this->session->set_userdata(array("discussionmessage" => "Successfully"));
-            redirect(base_url()."discussions");
+            redirect(base_url()."index.php/discussions");
         }
         else{
             $this->session->set_userdata(array("discussionmessage" => "Failed"));
-            redirect(base_url()."discussions");
+            redirect(base_url()."index.php/discussions");
 
         }
 		
@@ -72,7 +72,7 @@ class Discussions extends CI_Controller {
 	{
 		if(@$this->session->userdata("ucode") == "")
 		{
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		}
 		else{
 			$data["user"] = $this->user;

@@ -14,14 +14,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>View Discussion - #<?php echo @$code;?>
       <span class="hmenu">
-          <a href="<?php echo base_url();?>discussions" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/discussions" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>discussions">
+        <a href="<?php echo base_url();?>index.php/discussions">
             Discussions
         </a>
         </li>

@@ -9,12 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Tasks
       <span class="hmenu">
-          <a href="<?php echo base_url();?>add-task" class="btn btn-warning">Add Task</a>
+          <a href="<?php echo base_url();?>index.php/add-task" class="btn btn-warning">Add Task</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item active">Tasks</li>
     </ol>
   </nav>
@@ -166,7 +166,7 @@ function updateTaskStatus(taskid,projectid,oVal){
  
   $.ajax({
     type:"POST",
-    url:"<?php echo base_url();?>home/updateTaskStatus/"+taskid+"/"+projectid+"/"+oVal,
+    url:"<?php echo base_url();?>index.php/home/updateTaskStatus/"+taskid+"/"+projectid+"/"+oVal,
     async:false,
     success:function(response){
       window.location.reload();

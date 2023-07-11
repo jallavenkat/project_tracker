@@ -25,18 +25,18 @@ class Login extends CI_Controller {
 					$this->session->set_userdata(array(
 						"ucode" => @$verify[0]->user_code
 					));
-					redirect(base_url()."dashboard");
+					redirect(base_url()."index.php/dashboard");
 				}
 				else{
 					$this->session->set_userdata(array(
 						"logmessage" => "Invalid Email ID or Password."
 					));
-					redirect(base_url()."login");
+					redirect(base_url()."index.php/login");
 				}
 			}
 		}
 		else{
-			redirect(base_url()."dashboard");
+			redirect(base_url()."index.php/dashboard");
 		}
 			
 	}
@@ -49,11 +49,11 @@ class Login extends CI_Controller {
 				"ucode" => ""
 			));
 			$this->session->sess_destroy();
-			redirect(base_url()."login");
+			redirect(base_url()."index.php/login");
 		
 		}
 		else{
-			redirect(base_url()."dashboard");
+			redirect(base_url()."index.php/dashboard");
 		}
 			
 	}

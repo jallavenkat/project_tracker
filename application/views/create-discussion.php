@@ -23,14 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Add Item
       <span class="hmenu">
-          <a href="<?php echo base_url();?>discussions" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/discussions" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>discussions">
+        <a href="<?php echo base_url();?>index.php/discussions">
         Discussions
         </a>
         </li>
@@ -48,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h5 class="card-title">&nbsp;</h5>
           
             <div class="row mb-3">
-                <form method="POST" action="<?php echo base_url();?>discussions/saveDiscussion">
+                <form method="POST" action="<?php echo base_url();?>index.php/discussions/saveDiscussion">
                     <div class="col-lg-12 mb-3">
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-12 col-form-label">Topic Title:</label>

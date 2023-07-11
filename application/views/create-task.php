@@ -26,14 +26,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>Add Task
       <span class="hmenu">
-          <a href="<?php echo base_url();?>tasks" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/tasks" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>tasks">
+        <a href="<?php echo base_url();?>index.php/tasks">
             Tasks
         </a>
         </li>
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Add Task</h5>
-          <form method="POST" action="<?php echo base_url();?>home/saveTask" id="cTask" enctype="multipart/form-data">
+          <form method="POST" action="<?php echo base_url();?>index.php/home/saveTask" id="cTask" enctype="multipart/form-data">
               
             <div class="row mb-3">
                     <div class="col-lg-12 mb-3">
@@ -295,7 +295,7 @@ var save = function() {
 
 Dropzone.options.fileupload = {
         // Prevents Dropzone from uploading dropped files immediately
-        url:"<?php echo base_url();?>home/saveTask",
+        url:"<?php echo base_url();?>index.php/home/saveTask",
         uploadMultiple: true,
         paramName: "file",
         maxFilesize: 100,
@@ -321,7 +321,7 @@ Dropzone.options.fileupload = {
         },
         init: function () {
             // $.ajax({
-            //     url: '<?php echo base_url();?>home/uploadTaskFolder/<?php echo @$rowid;?>',
+            //     url: '<?php echo base_url();?>index.php/home/uploadTaskFolder/<?php echo @$rowid;?>',
             //     type: 'get',
             //     dataType: 'json',
             //     success: function (response) {
@@ -375,7 +375,7 @@ Dropzone.options.fileupload = {
             // console.log("response ",response)
           if(response == 1 || response == "1")
           {
-            window.location.href="<?php echo base_url();?>tasks";
+            window.location.href="<?php echo base_url();?>index.php/tasks";
           }
         }
 };

@@ -16,14 +16,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="pagetitle">
   <h1>View Task#<?php echo @$task[0]->task_name;?>
       <span class="hmenu">
-          <a href="<?php echo base_url();?>tasks" class="btn btn-light">Back</a>
+          <a href="<?php echo base_url();?>index.php/tasks" class="btn btn-light">Back</a>
       </span>
   </h1>
   <nav>
     <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="<?php echo base_url();?>">Home</a></li>
+      <li class="breadcrumb-item"><a href="<?php echo base_url();?>index.php/">Home</a></li>
       <li class="breadcrumb-item">
-        <a href="<?php echo base_url();?>tasks">
+        <a href="<?php echo base_url();?>index.php/tasks">
             Tasks
         </a>
         </li>
@@ -39,13 +39,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">&nbsp;
-            <a href="<?php echo base_url();?>edit-task/<?php echo @$task[0]->task_code;?>" class="btn btn-light float-left f12"><i class="fa fa-edit"></i> Edit</a>
-            <a href="<?php echo base_url();?>add-subtask/<?php echo @$task[0]->task_code;?>" class="btn btn-secondary float-right f12"><i class="fa fa-plus"></i> Add Subtask</a>
+            <a href="<?php echo base_url();?>index.php/edit-task/<?php echo @$task[0]->task_code;?>" class="btn btn-light float-left f12"><i class="fa fa-edit"></i> Edit</a>
+            <a href="<?php echo base_url();?>index.php/add-subtask/<?php echo @$task[0]->task_code;?>" class="btn btn-secondary float-right f12"><i class="fa fa-plus"></i> Add Subtask</a>
           </h5>
           
             <div class="row mb-3">
               <div class="col-lg-7 mb-3">
-                <form method="POST" action="<?php echo base_url();?>home/updateTask">
+                <form method="POST" action="<?php echo base_url();?>index.php/home/updateTask">
                 <div class="col-lg-12 mb-3">
                         <div class="row mb-3">
                             <label for="inputText" class="col-sm-3 col-form-label">Select Project</label>
@@ -263,7 +263,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         autoProcessQueue: false,
         init: function () {
             // $.ajax({
-            //     url: '<?php echo base_url();?>home/uploadTaskFolder/<?php echo @$rowid;?>',
+            //     url: '<?php echo base_url();?>index.php/home/uploadTaskFolder/<?php echo @$rowid;?>',
             //     type: 'get',
             //     dataType: 'json',
             //     success: function (response) {
